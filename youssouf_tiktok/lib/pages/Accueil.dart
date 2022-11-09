@@ -1,9 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-import 'package:youssouf_tiktok/posts/mypost_1.dart';
-import 'package:youssouf_tiktok/posts/mypost_2.dart';
-import 'package:youssouf_tiktok/posts/mypost_3.dart';
 import 'dart:math' as math;
 
 class AccueilPage extends StatelessWidget {
@@ -39,33 +36,11 @@ class AccueilPage extends StatelessWidget {
             child: Stack(
               children: [video(videourl: item['video']), PostContent()],
             ),
-            // child: Scaffold(
-            //   body: Stack(
-            //     children: [video(videourl: i['video']), AccueilPage()],
-            //   ),
-            // ),
           );
         });
       }).toList(),
     );
-    // Scaffold(
-    //   body: PageView(
-    //     controller: _controller,
-    //     scrollDirection: Axis.vertical,
-    //     children: [
-    //       // Mypost1(),
-    //       // Mypost2(),
-    //       // Mypost3(),
-    //       // video(video(videourl: i['video']), AccueilPage())
-    //     ],
-    //   ),
-    // );
   }
-
-//   }
-// }
-
-// video player
 }
 
 class video extends StatefulWidget {
@@ -137,7 +112,6 @@ class PostContent extends StatelessWidget {
             children: [
               Expanded(
                 child: Container(
-                  // color: Colors.red.withOpacity(0.5),
                   padding: EdgeInsets.all(10),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,

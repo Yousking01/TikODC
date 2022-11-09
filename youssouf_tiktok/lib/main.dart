@@ -1,6 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
+import 'package:youssouf_tiktok/auth/dateInscription.dart';
+import 'package:youssouf_tiktok/auth/login_screen.dart';
+import 'package:youssouf_tiktok/auth/passwordforget.dart';
+import 'package:youssouf_tiktok/auth/signup_screen.dart';
 
 import 'homepage.dart';
 
@@ -17,9 +21,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(brightness: Brightness.dark),
-      home: HomePage(),
+      // home: LoginScreen(),
+      // home: SignupScreen(),
+      // home: DateInscription(),
+      home: PassForget(),
     );
   }
 }
-
-
