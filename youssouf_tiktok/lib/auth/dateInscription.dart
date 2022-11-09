@@ -97,7 +97,8 @@ class _DateInscriptionState extends State<DateInscription> {
                       onPressed: () => {
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (_) => SignupScreen(),
-                        ))
+                        ),
+                        ),
                       },
                       style: ElevatedButton.styleFrom(
                         primary: Colors.redAccent,

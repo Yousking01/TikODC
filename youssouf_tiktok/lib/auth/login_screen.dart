@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:youssouf_tiktok/auth/inscription.dart';
+import 'package:youssouf_tiktok/homepage.dart';
 // import 'package:tiktok_app/constants.dart';
 // import 'package:tiktok_app/view/widgets/text_input_field.dart';
 import 'package:youssouf_tiktok/util/constants.dart';
@@ -71,8 +73,12 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               child: InkWell(
-                onTap: () {
-                  print('navigatin user');
+                onTap: () => {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => HomePage(),
+                    ),
+                  ),
                 },
                 child: const Center(
                   child: Text(
@@ -98,8 +104,12 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 InkWell(
-                  onTap: () {
-                    print('navigating user');
+                  onTap: () => {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => MonInscrp(),
+                      ),
+                    ),
                   },
                   child: Text(
                     'S\'inscrire',

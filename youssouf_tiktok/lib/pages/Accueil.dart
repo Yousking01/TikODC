@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'dart:math' as math;
 
+import 'package:youssouf_tiktok/auth/inscription.dart';
+
 class AccueilPage extends StatelessWidget {
   //  AccueilPage({super.key});
 
@@ -169,7 +171,7 @@ class PostContent extends StatelessWidget {
                             alignment: AlignmentDirectional.bottomCenter,
                             children: [
                               Container(
-                                margin: EdgeInsets.only(bottom: 10),
+                                margin: EdgeInsets.only(bottom: 10), 
                                 child: CircleAvatar(
                                   radius: 25,
                                   backgroundImage: AssetImage(
@@ -186,12 +188,21 @@ class PostContent extends StatelessWidget {
                                   color: Colors.red,
                                   borderRadius: BorderRadius.circular(20),
                                 ),
-                                child: Icon(
-                                  Icons.add,
-                                  color: Colors.white,
-                                  size: 15,
+                                child: InkWell(
+                                  onTap: () => {
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                        builder: (_) => MonInscrp(),
+                                      ),
+                                    ),
+                                  },
+                                  child: Icon(
+                                    Icons.add,
+                                    color: Colors.white,
+                                    size: 15,
+                                  ),
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         ),

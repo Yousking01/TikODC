@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:youssouf_tiktok/auth/login_screen.dart';
+import 'package:youssouf_tiktok/homepage.dart';
+import 'package:youssouf_tiktok/pages/Accueil.dart';
+import 'package:youssouf_tiktok/pages/profile.dart';
 // import 'package:tiktok_app/constants.dart';
 // import 'package:tiktok_app/controller/auth_controller.dart';
 // import 'package:tiktok_app/view/widgets/text_input_field.dart';
@@ -124,13 +128,13 @@ class SignupScreen extends StatelessWidget {
                 ),
               ),
               child: InkWell(
-                onTap: () {},
-                //=> authController.registerUser(
-                //   _usernameController.text,
-                //   _emailController.text,
-                //   _passwordController.text,
-                //   authController.profilePhoto,
-                // ),
+                onTap: () => {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const HomePage(),
+                    ),
+                  ),
+                },
                 child: const Center(
                   child: Text(
                     'Inscription',
@@ -155,8 +159,12 @@ class SignupScreen extends StatelessWidget {
                   ),
                 ),
                 InkWell(
-                  onTap: () {
-                    print('navigating user');
+                  onTap: () => {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => LoginScreen(),
+                      ),
+                    ),
                   },
                   child: Text(
                     'Connexion',
@@ -164,7 +172,7 @@ class SignupScreen extends StatelessWidget {
                   ),
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),
