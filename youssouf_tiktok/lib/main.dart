@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(brightness: Brightness.dark),
+      debugShowCheckedModeBanner: false,
       // home: LoginScreen(),
       // home: SignupScreen(),
       // home: DateInscription(),
